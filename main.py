@@ -11,8 +11,9 @@ AGE = 34
 application_id = os.environ.get("APPLICATION_ID")
 api_keys = os.environ.get("API_KEYS")
 
-query = input(f"How's today's workout? "
-              f"(Ex: I ran 3 miles and walked 2 miles ): ").lower()
+query = input(f"How's today's workout?\n"
+              f"(ex: I ran 3 miles and walked 2 miles)\n(or: "
+              f"30 min yoga) \nAnswer: ").lower()
 # gender = input(f" What's your gender? (Female/Male): ").lower()
 # weight_kg = float(input(f"Kg: "))
 # height_cm = float(input(f"Cm: "))
