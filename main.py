@@ -6,10 +6,11 @@ import os
 import datetime
 
 CURRENT = datetime.datetime.now()
+sheety_auth = os.environ.get("SHEETY_AUTH")
 
 sheety_url = "https://api.sheety.co/792a621e9a95f9932e7a7e96c1680077/workoutTracking/workouts"
 sheety_headers = {
-    "Authorization": "Basic d2FueXVkZXZ0ZXN0OmRzaGprZmh3aXVpZHNramdmbGRqZmts"
+    "Authorization": sheety_auth
 }
 
 sheety_get_response = requests.get(sheety_url, headers=sheety_headers)
@@ -100,3 +101,4 @@ for item in data["exercises"]:
     print(sheety_response.text)
 # Perfectly done with all the rest!
 #---------------------------------------------------------------------------------------------
+# Project done!
